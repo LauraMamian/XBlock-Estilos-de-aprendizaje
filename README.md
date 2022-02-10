@@ -1,1 +1,1 @@
-# Test de Bandler y Grinder
+# XBlock de Estilos de Aprendizaje
