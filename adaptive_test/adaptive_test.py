@@ -59,13 +59,13 @@ class AdaptiveTestXBlock(XBlock):
         frag = Fragment(html.format(self=self))
         
         frag.add_css(self.resource_string("static/css/adaptive_test.css"))
-
+        
         frag.add_javascript(self.resource_string("static/js/src/jquery-1.12.4.js"))
         frag.add_javascript(self.resource_string("static/js/src/jquery-ui.js"))
         frag.add_javascript(self.resource_string("static/js/src/student_adaptive_test.js"))
         frag.add_javascript_url("https://cdn.jsdelivr.net/npm/apexcharts")
         frag.add_javascript_url("https://cdn.jsdelivr.net/npm/chart.js")
-        
+        frag.add_javascript_url("https://cdn.jsdelivr.net/npm/sweetalert2@11.4.0/dist/sweetalert2.all.js")    
         frag.initialize_js('StudentAdaptiveTestXBlock')
         return frag
 
@@ -74,7 +74,7 @@ class AdaptiveTestXBlock(XBlock):
         html = self.resource_string("static/html/studio_analytics.html")
         frag = Fragment(html.format(self=self))
         frag.add_javascript(self.resource_string("static/js/src/studio_analytics.js"))
-            
+        frag.add_javascript_url("https://cdn.jsdelivr.net/npm/sweetalert2@11.4.0/dist/sweetalert2.all.js")   
         frag.add_css(self.resource_string("static/css/adaptive_test.css"))        
         frag.initialize_js('StudioAnalyticsXBlock')
         return frag
@@ -89,7 +89,7 @@ class AdaptiveTestXBlock(XBlock):
         html = self.resource_string("static/html/studio_adaptive_test.html")
         frag = Fragment(html.format(self=self))
         frag.add_javascript(self.resource_string("static/js/src/studio_adaptive_test.js"))
-
+        frag.add_javascript_url("https://cdn.jsdelivr.net/npm/sweetalert2@11.4.0/dist/sweetalert2.all.js")    
         frag.add_css(self.resource_string("static/css/adaptive_test.css"))        
         frag.initialize_js('StudioAdaptiveTestXBlock') # Notice
 

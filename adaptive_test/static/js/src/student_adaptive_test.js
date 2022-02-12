@@ -720,7 +720,11 @@ function StudentAdaptiveTestXBlock(runtime, element) {
         }
         catch(e){
             console.log(e);
-            window.alert("NO has llenado la totalidad del Test!");
+            Swal.fire({
+                icon: 'error',
+                title: 'Lo sentimos',
+                text: 'Nos has llenado el test en su totalidad!'
+              })
         }
     }
     
