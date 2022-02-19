@@ -20,7 +20,7 @@ class AdaptiveTestXBlock(XBlock):
     # See scopes definition for user_state (per user) and user_state_summary (global), among others.
     testNumber = Integer(
         default=6, scope=Scope.user_state_summary,
-        help="Test number (0: Not avaliable, 1: Kolb, 2: Dominancia",
+        help="Test number (0: Not avaliable, 1: Kolb, 2: Dominancia, 3:Inteligencias Multiples, 4:Honey-Alonso, 5:Felder Silverman, 6: Bandler & Grinder",
     )
     # TestResult contains object: { result: string }
     testResult = JSONField(
@@ -56,12 +56,11 @@ class AdaptiveTestXBlock(XBlock):
         when viewing courses.
         """
         html = self.resource_string("static/html/student_adaptive_test.html")
-        frag = Fragment(html.format(self=self))
-        
-        frag.add_css(self.resource_string("static/css/adaptive_test.css"))
-        
+        frag = Fragment(html.format(self=self)) 
+        frag.add_css(self.resource_string("static/css/adaptive_test.css"))        
         frag.add_javascript(self.resource_string("static/js/src/jquery-1.12.4.js"))
         frag.add_javascript(self.resource_string("static/js/src/jquery-ui.js"))
+        frag.add_javascript(self.resource_string("static/js/src/templates.js"))
         frag.add_javascript(self.resource_string("static/js/src/student_adaptive_test.js"))
         frag.add_javascript_url("https://cdn.jsdelivr.net/npm/apexcharts")
         frag.add_javascript_url("https://cdn.jsdelivr.net/npm/chart.js")
