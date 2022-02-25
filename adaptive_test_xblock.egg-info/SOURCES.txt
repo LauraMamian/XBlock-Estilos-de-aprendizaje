@@ -1,3 +1,5 @@
+LICENSE
+README.md
 setup.py
 adaptive_test/__init__.py
 adaptive_test/adaptive_test.py
@@ -15,6 +17,7 @@ adaptive_test/static/css/bootstrap.min.css.map
 adaptive_test/static/css/vista_reglas_estudiante.css
 adaptive_test/static/css/vista_reglas_maestro.css
 adaptive_test/static/html/adaptive_test.html
+adaptive_test/static/html/bandler_grinder_template.html
 adaptive_test/static/html/dominancia_template_base.html
 adaptive_test/static/html/felder_silverman_template.html
 adaptive_test/static/html/honey_alonso_template_base.html
@@ -32,9 +35,12 @@ adaptive_test/static/js/src/student_adaptive_test.js
 adaptive_test/static/js/src/studio_adaptive_test.js
 adaptive_test/static/js/src/studio_adaptive_test.js.save
 adaptive_test/static/js/src/studio_analytics.js
+adaptive_test/static/js/src/templates.js
+adaptive_test/static/js/src/templates.json
 adaptive_test/static/js/src/vista_reglas_estudiante.js
 adaptive_test/static/js/src/vista_reglas_maestro.js
 adaptive_test/static/js/src/dist/studio_analytics.dev.js
+adaptive_test/static/js/src/scripts/require.js
 adaptive_test/static/src/index.css
 adaptive_test/static/src/index.html
 adaptive_test/static/src/index.js
