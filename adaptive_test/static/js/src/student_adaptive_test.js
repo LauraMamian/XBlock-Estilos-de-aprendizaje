@@ -1,4 +1,3 @@
-
 /* Javascript for StudentAdaptiveTestXBlock. */
 function StudentAdaptiveTestXBlock(runtime, element) {
     // See load and submit funcions at python script
@@ -30,12 +29,23 @@ function StudentAdaptiveTestXBlock(runtime, element) {
                     //if (data.test == 6){
                     arraydatos = data.test_result.result.split(" ");
                     console.log(arraydatos);
-                    p_visual = arraydatos[3].substring(0, arraydatos[3].length - 1);
-                    p_auditivo = arraydatos[5].substring(0, arraydatos[5].length - 1);
-                    p_kines = arraydatos[7].substring(0, arraydatos[7].length - 1);
+                    p_visual = 0;
+                    p_auditivo = 0;
+                    p_kines = 0;
+                    
 
-                    var Chartgrafico = {
-                        type: "doughnut",
+                    for (var i = 0; i < arraydatos.length; i++) {
+                        if (arraydatos[i].substr(0, 11) == "<br>Visual:") {
+                            p_visual = arraydatos[i+1].substring(0, arraydatos[i+1].length - 1);
+                        } else if (arraydatos[i].substr(0, 13) == "<br>Auditivo:") {
+                            p_auditivo = arraydatos[i+1].substring(0, arraydatos[i+1].length - 1);
+                        }else if (arraydatos[i].substr(0, 16) == "<br>Kinestésico:") {
+                            p_kines = arraydatos[i+1].substring(0, arraydatos[i+1].length - 1);
+                        }
+                    }
+
+                var Chartgrafico = {
+                        type: "bar",
                         data: {
                             datasets: [{
                                 data: [p_visual, p_auditivo, p_kines],
@@ -47,13 +57,20 @@ function StudentAdaptiveTestXBlock(runtime, element) {
                                 " Visual", " Auditivo", " Kinestésico",
                             ]
                         },
-                        options: {
-                            responsive: true,
-                        }
+			 options: {
+			    responsive: true,
+			    plugins: {
+				legend: {
+				    display: false
+				}
+			    }
+			}
                     }
 
-                    var grafica = document.getElementById('chart');
-                    window.pie = new Chart(grafica, Chartgrafico);
+                    var grafica = document.getElementById('chart');
+                    window.pie = new Chart(grafica, Chartgrafico);
+
+
                     // }
                     //---------------------------------------------------------
 
@@ -206,12 +223,22 @@ function StudentAdaptiveTestXBlock(runtime, element) {
                     //---------------------------------------------
                     arraydatos = result.result.split(" ");
                     console.log(arraydatos);
-                    p_visual = arraydatos[3].substring(0, arraydatos[3].length - 1);
-                    p_auditivo = arraydatos[5].substring(0, arraydatos[5].length - 1);
-                    p_kines = arraydatos[7].substring(0, arraydatos[7].length - 1);
+                    p_visual = 0;
+                    p_auditivo = 0;
+                    p_kines = 0;
+                    
+                    for (var i = 0; i < arraydatos.length; i++) {
+                        if (arraydatos[i].substr(0, 11) == "<br>Visual:") {
+                            p_visual = arraydatos[i+1].substring(0, arraydatos[i+1].length - 1);
+                        } else if (arraydatos[i].substr(0, 13) == "<br>Auditivo:") {
+                            p_auditivo = arraydatos[i+1].substring(0, arraydatos[i+1].length - 1);
+                        }else if (arraydatos[i].substr(0, 16) == "<br>Kinestésico:") {
+                            p_kines = arraydatos[i+1].substring(0, arraydatos[i+1].length - 1);
+                        }
+                    }
 
-                    var Chartgrafico = {
-                        type: "doughnut",
+                   var Chartgrafico = {
+                        type: "bar",
                         data: {
                             datasets: [{
                                 data: [p_visual, p_auditivo, p_kines],
@@ -223,9 +250,14 @@ function StudentAdaptiveTestXBlock(runtime, element) {
                                 " Visual", " Auditivo", " Kinestésico",
                             ]
                         },
-                        options: {
-                            responsive: true,
-                        }
+			 options: {
+			    responsive: true, 
+			    plugins: {
+				legend: {
+				    display: false
+				}
+			    }
+			}
                     }
 
                     var grafica = document.getElementById('chart');
@@ -469,20 +501,44 @@ function StudentAdaptiveTestXBlock(runtime, element) {
                 } else {
                     strQuadrant = 'Dominante Visual <br>';
                 }
+                strQuadrant = strQuadrant + `Visual: ${visualResult.length * 100 / 40}% <br>`
+                if (auditivoResult.length >= cinesResult.length) {
+                    strQuadrant = strQuadrant + `Auditivo: ${auditivoResult.length * 100 / 40}% <br>`
+                    strQuadrant = strQuadrant + `Kinestésico: ${cinesResult.length * 100 / 40}% <br>`
+                } else {
+                    strQuadrant = strQuadrant + `Kinestésico: ${cinesResult.length * 100 / 40}% <br>`
+                    strQuadrant = strQuadrant + `Auditivo: ${auditivoResult.length * 100 / 40}% <br>`
+                }
+
             } else if (auditivoResult.length >= visualResult.length && auditivoResult.length >= cinesResult.length) {
                 if (auditivoResult.length == cinesResult.length) {
                     strQuadrant = 'Dominante Auditivo-Kinestésico <br>';
                 } else {
                     strQuadrant = 'Dominante Auditivo <br>';
                 }
+                strQuadrant = strQuadrant + `Auditivo: ${auditivoResult.length * 100 / 40}% <br>`
+                if (visualResult.length >= cinesResult.length) {
+                    strQuadrant = strQuadrant + `Visual: ${visualResult.length * 100 / 40}% <br>`
+                    strQuadrant = strQuadrant + `Kinestésico: ${cinesResult.length * 100 / 40}% <br>`
+                } else {
+                    strQuadrant = strQuadrant + `Kinestésico: ${cinesResult.length * 100 / 40}% <br>`
+                    strQuadrant = strQuadrant + `Visual: ${visualResult.length * 100 / 40}% <br>`
+                }
+
             } else if (cinesResult.length >= visualResult.length && cinesResult.length > auditivoResult.length) {
                 strQuadrant = 'Dominante Kinestésico <br>';
+                strQuadrant = strQuadrant + `Kinestésico: ${cinesResult.length * 100 / 40}% <br>`
+                if (visualResult.length >= auditivoResult.length) {
+                    strQuadrant = strQuadrant + `Visual: ${visualResult.length * 100 / 40}% <br>`
+                    strQuadrant = strQuadrant + `Auditivo: ${auditivoResult.length * 100 / 40}% <br>`
+                } else {
+                    strQuadrant = strQuadrant + `Auditivo: ${auditivoResult.length * 100 / 40}% <br>`
+                    strQuadrant = strQuadrant + `Visual: ${visualResult.length * 100 / 40}% <br>`
+                }
+
             }
 
             //strQuadrant = {'result':`auditivo: ${auditivoResult.length*100/40}%`};
-            strQuadrant = strQuadrant + `Visual: ${visualResult.length * 100 / 40}% <br>`
-            strQuadrant = strQuadrant + `Auditivo: ${auditivoResult.length * 100 / 40}% <br>`
-            strQuadrant = strQuadrant + `Kinestésico: ${cinesResult.length * 100 / 40}% <br>`
             responseTestBG = { 'result': strQuadrant };
             return responseTestBG;
         }
