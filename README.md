@@ -48,10 +48,10 @@ El estudiante visualiza la interfaz principal que contiene las 40 preguntas corr
 
 Al completar todo el test, para visualizar el resultado obtenido, se debe seleccionar la opción “Enviar”. Esto despliega inmediatamente una interfaz en donde se indican los 3 tipos de dominancia: Visual, Auditiva y Kinestésica, seguido del porcentaje determinado de acuerdo a las respuestas del test, ordenadas en forma descendente.
 
-![Resultado de estudiante](https://raw.githubusercontent.com/LauraMamian/XBlock-Estilos-de-aprendizaje/grupo2/img/res_est1.png)
+![Resultado de estudiante](https://raw.githubusercontent.com/LauraMamian/XBlock-Estilos-de-aprendizaje/grupo2/img/res_est1.jpg)
 
 En la parte inferior de la interfaz, se presenta una gráfica de barras complementaria que indica los porcentajes obtenidos de cada una de las tres dominancias (Visual, Auditivo y Kinestésico) en el eje Y y los tipos de dominancia sobre el eje X.
 
-![Grafica de estudiante](https://raw.githubusercontent.com/LauraMamian/XBlock-Estilos-de-aprendizaje/grupo2/img/res_est2.png)
+![Grafica de estudiante](https://raw.githubusercontent.com/LauraMamian/XBlock-Estilos-de-aprendizaje/grupo2/img/res_est2.jpg)
 
 Finalmente solo está habilitada la opción “Vista Studio Analytics” que redirige a la vista docente.
