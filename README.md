@@ -76,7 +76,7 @@ Continuando se desplegará una interfaz donde el usuario deberá cargar el archi
 
 Nota: Al seleccionar un tipo de archivo, se le sugerirá una cohorte que más convenga con este, pero el usuario tiene la opción de cambiarla, pero siempre debe seleccionar una dado que el no hacerlo no permitirá la subida del archivo.
 
-## 4.1 Vista Reglas Estudiante
+## 4.2 Vista Reglas Estudiante
 
 En esta interfaz el usuario estudiante observara los resultados obtenidos realizado el test, la cohorte a la que ha sido asignado dado estos resultados y los recursos que se encuentran disponibles para él y donde puede acceder a ellos.
 
