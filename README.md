@@ -12,9 +12,9 @@ Para una correcta interpretación de los resultados que arroja el test de Bandle
 - [3. Modo de Uso](#3-modo-de-uso)
   - [3.1 Vista Docente](#31-vista-docente)
   - [3.2 Vista Estudiante](#32-vista-estudiante)
-- [4. Gestor de reglas](#3-gestor-de-reglas)
-  - [4.1 Vista Reglas Docente](#31-vista-reglas-docente)
-  - [4.2 Vista Reglas Estudiante](#32-vista-reglas-estudiante)
+- [4. Gestor de reglas](#4-gestor-de-reglas)
+  - [4.1 Vista Reglas Docente](#41-vista-reglas-docente)
+  - [4.2 Vista Reglas Estudiante](#42-vista-reglas-estudiante)
 
 # 1. Prerrequisitos
 
