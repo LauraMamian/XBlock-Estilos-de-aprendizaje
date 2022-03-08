@@ -147,6 +147,32 @@ function agregarcontenido(a){
         //console.log(codigo)
         document.getElementById("agregarcontenido").innerHTML = codigo;
     }
+    if(tipoagregacion=="url"){
+        codigo=''+        
+    '<form class="d-flex mt-3 flex-wrap" id="estilo_aprendizaje" action=">'+
+        '<label class="formFile mt-3 mb-1" for="myfile"> Adjunta una URL: </label>'+
+        //'<input class="form-control mb-3" type="file" id="myfile" name="myfile">'+
+        '<input class="form-control mb-3" type="url" onKeyPress="if(event.keyCode == 13) event.returnValue = false;" name="myfile" id="myfile" placeholder="https://example.com"  pattern="https://.*" size="30" required></input>'+
+          
+        '<div class="card me-3">'+
+            '<div class="card-header text-white bg-primary">'+
+                '<b class="m-0">Cohorte recomendada: Visual</b>'+
+            '</div>'+
+            '<div class="card-body border border-primary">'+
+                '<select class="form-select" name="select_aprendizaje" id="selector1" >'+
+                    '<option value="Visual">Cohorte Visual</option>'+
+                    '<option value="Auditivo">Cohorte Auditivo</option>'+
+                    '<option value="Kinestetico" selected>Cohorte Kinestetico</option>'+                    
+                '</select>'+
+            '</div>'+
+        '</div>'+        
+                       
+        '</form>'+
+        '<p class="bd-callout bd-callout-warning mt-4 mb-1" id="nota-importante"><span>Nota:</span> Recuerda que debes escoger una cohorte.</p>';
+        
+        //console.log(codigo)
+        document.getElementById("agregarcontenido").innerHTML = codigo;
+    }
 
 
 }

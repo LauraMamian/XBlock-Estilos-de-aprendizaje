@@ -6,7 +6,8 @@ function ReglasEstudiante(runtime, element) {
     $(function ($) {          
 
         var tag = ""
-        var recursoLoad= ""
+        var recursoLoad1= ""
+        var recursoLoad2= ""
         
         $.ajax({
             type: "POST",
@@ -26,19 +27,50 @@ function ReglasEstudiante(runtime, element) {
                     
                     var resultado = data.test_result.result
                     if(resultado.includes("Dominante Auditivo")){
-                        var cohorte= "Auditivo";
-                        console.log(cohorte)
+                        var cohorte1= "Auditivo";
+                        var cohorte2= "sindatos";
+                        var nombre = "Auditivo";
+                        console.log(cohorte1)
+                        console.log(cohorte2)
                     }
                     if(resultado.includes("Dominante Visual")){
-                        var cohorte= "Visual";
-                        console.log(cohorte)
+                        var cohorte1= "Visual";
+                        var cohorte2= "sindatos";
+                        var nombre = "Visual";
+                        console.log(cohorte1)
+                        console.log(cohorte2)
                     }
                     if(resultado.includes("Dominante Kinestésico")){
-                        var cohorte= "Kinestetico";
-                        console.log(cohorte)
+                        var cohorte1= "Kinestetico";
+                        var cohorte2= "sindatos";
+                        var nombre = "Kinestetico";
+                        console.log(cohorte1)
+                        console.log(cohorte2)
                     }
-                    $("#cohorteasignacion").append('<b>' +cohorte+'</b>')
-                    recursoLoad=cohorte;
+                    if(resultado.includes("Dominante Visual-Auditivo")){
+                        var cohorte1= "Auditivo";
+                        var cohorte2= "Visual";
+                        var nombre = "Visual y Auditivo";
+                        console.log(cohorte1)
+                        console.log(cohorte2)
+                    }
+                    if(resultado.includes("Dominante Auditivo-Kinestésico")){
+                        var cohorte1= "Auditivo";
+                        var cohorte2= "Kinestetico";
+                        var nombre = "Auditivo y Kinestésico";
+                        console.log(cohorte1)
+                        console.log(cohorte2)
+                    }
+                    if(resultado.includes("Dominante Visual-Kinestésico")){
+                        var cohorte1= "Kinestetico";
+                        var cohorte2= "Visual";
+                        var nombre = "Visual y Kinestésico";
+                        console.log(cohorte1)
+                        console.log(cohorte2)
+                    }
+                    $("#cohorteasignacion").append('<b>' +nombre+'</b>')
+                    recursoLoad1=cohorte1;
+                    recursoLoad2=cohorte2;
                    
                     resultadotext = resultado.replaceAll("<br>","").split(" ")
                     console.log(resultado)                    
@@ -80,7 +112,7 @@ function ReglasEstudiante(runtime, element) {
                 var recursos=""
                 setTimeout(function(){                    
                     for(k=0; k<(data.length); k++){                                
-                        if(data[k].tag==recursoLoad){
+                        if((data[k].tag==recursoLoad1)||(data[k].tag==recursoLoad2)){
                             recursos=recursos+data[k].resource+'<br>';                            
                             console.log(data[k].resource)
                         }
