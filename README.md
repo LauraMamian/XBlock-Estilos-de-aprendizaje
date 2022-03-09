@@ -68,7 +68,7 @@ Para una correcta interpretación de los resultados que arroja el test de Bandle
 
 Se requiere que al menos un estudiante haya diligenciado por completo el test de Bandler y Grinder y adicionalmente, haya seleccionado la opción “enviar” con el objetivo de presentar el resultado obtenido, y del mismo modo el docente pueda observar los resultados de los estudiantes que han llenado el test.
 
-## 2. Posibles Resultados
+## 4.2 Posibles Resultados
 
 Además de los tres grandes tipos de dominancia correspondientes a: visual, auditivo y kinestésico se pueden presentar casos en los cuales un estudiante presente el mismo porcentaje en dos tipos. Por lo anterior, existen 6 posibles resultados, presentados a continuación: 
 
@@ -79,9 +79,9 @@ Además de los tres grandes tipos de dominancia correspondientes a: visual, audi
 - Visual-Kinestésico
 - Auditivo-Kinestésico
 
-## 3. Modo de Uso
+## 4.3 Modo de Uso
 
-### 3.1 Vista Docente
+### 4.3.1 Vista Docente
 
 Para visualizar los resultados de los estudiantes desde la vista diseñada para el docente, es necesario seleccionar la opción “Vista Studio Analytics”. Esto despliega una nueva interfaz, tal y como se muestra en las siguientes imágenes.  
 
@@ -93,7 +93,7 @@ Para visualizar las gráficas, se debe seleccionar la opción “Mostrar Gráfic
 
 ![Grafica de Resultados](https://raw.githubusercontent.com/LauraMamian/XBlock-Estilos-de-aprendizaje/grupo3/img/res_grafs.png)
 
-### 3.2 Vista Estudiante
+### 4.3.2 Vista Estudiante
 
 El estudiante visualiza la interfaz principal que contiene las 40 preguntas correspondientes al test que se ha seleccionado previamente, en este caso es Bandler-Grinder.
 
@@ -107,12 +107,12 @@ En la parte inferior de la interfaz, se presenta una gráfica de barras compleme
 
 Finalmente solo está habilitada la opción “Vista Studio Analytics” que redirige a la vista docente.
 
-## 4. Gestor de reglas
+## 4.4 Gestor de reglas
 Para la implementación de las reglas se hace uso de cohortes, donde se dividirán los estudiantes en grupos pequeños, estos grupos serán conformados según los resultados obtenidos en el test de aprendizaje, de esta forma los estudiantes tendrán un aprendizaje personalizado dependiendo de su estilo de aprendizaje y a su vez tendrán acceso a recursos que se enfoquen a su cohorte asignada, los cuales serán subidos, editados y/o controlados por el maestro.
 
 Al observar los resultados, se podrá acceder a dos vistas diferentes, las cuales son: vista reglas maestro y vista reglas estudiantes.
 
-### 4.1 Vista Reglas Maestro
+### 4.4.1 Vista Reglas Maestro
 
 Inicialmente la interfaz consta de la selección del tipo de archivo que se subirá, el usuario, en este caso el maestro, deberá seleccionar una opción para poder continuar. 
 
@@ -124,7 +124,7 @@ Continuando se desplegará una interfaz donde el usuario deberá cargar el archi
 
 Nota: Al seleccionar un tipo de archivo, se le sugerirá una cohorte que más convenga con este, pero el usuario tiene la opción de cambiarla, pero siempre debe seleccionar una dado que el no hacerlo no permitirá la subida del archivo.
 
-### 4.2 Vista Reglas Estudiante
+### 4.4.2 Vista Reglas Estudiante
 
 En esta interfaz el usuario estudiante observara los resultados obtenidos realizado el test, la cohorte a la que ha sido asignado dado estos resultados y los recursos que se encuentran disponibles para él y donde puede acceder a ellos.
 
