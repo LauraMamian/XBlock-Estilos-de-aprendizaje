@@ -1,0 +1,9 @@
+/* CSS for MOdeloAprendizajeXBlock */
+
+.modelo_de_aprendizaje_bandler_y_grinder_block .count {
+    font-weight: bold;
+}
+
+.modelo_de_aprendizaje_bandler_y_grinder_block p {
+    cursor: pointer;
+}

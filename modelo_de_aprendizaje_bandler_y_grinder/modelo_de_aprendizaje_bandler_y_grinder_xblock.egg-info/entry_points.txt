@@ -1,0 +1,3 @@
+[xblock.v1]
+modelo_de_aprendizaje_bandler_y_grinder = modelo_de_aprendizaje_bandler_y_grinder:MOdeloAprendizajeXBlock
+
