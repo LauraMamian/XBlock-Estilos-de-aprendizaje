@@ -1,4 +1,4 @@
-# XBlock-Estilos-de-Aprendizaje
+# XBlock Estilos de Aprendizaje
 
 Este XBlock fue creado con el fin de obtener el estilo de aprendizaje de los estudiantes de un curso de OpenEDX, para que el profesor conozca a partir de cualquiera de los test disponibles que material del curso debe subir y se ajuste a cada estilo de aprendizaje de los estudiantes.
 
